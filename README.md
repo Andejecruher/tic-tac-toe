@@ -23,4 +23,12 @@ CSS3 → estilos y diseño visual.
 
 JavaScript → lógica del juego.
 
+📌 Próximas mejoras
 
+✅ Animaciones en las casillas al marcar.
+
+✅ Contador de partidas ganadas.
+
+🌐 Versión multijugador en línea.
+
+🤖 Implementación de un modo contra la computadora.
