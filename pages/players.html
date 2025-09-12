@@ -1,32 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic-Tac-Toe</title>
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
 
-<body>
-    <center>
-        <h1>Tic-Tac-Toe Game - Configuracion de jugadores</h1>
-        <h1>Aqui ira el diseno de la configuracion de jugadores</h1>
-    </center>
-    <form action="">
-        <label for="player1">Jugador 1:</label>
-        <input type="text" id="player1" name="player1" required>
-        <br>
-        <label for="player2">Jugador 2:</label>
-        <input type="text" id="player2" name="player2" required>
-        <br>
-    </form>
-    <div class="btn-group">
-        <center>
-            <button style="font-size: 30px; padding: 20px 30px;  background-color: rgb(7, 7, 8); color: white;">iniciar
-                partida</button>
-        </center>
-    </div>
-</body>
+  <body>
+    <section class="content">
+      <div class="content-title">
+        <img src="/assets/img/logo.png" alt="Tic-Tac-Toe" class="logo-img-header" />
+        <h1 class="title">Tic-Tac-Toe Game</h1>
+        <p class="subtitle">Configuracion de Juadores</p>
+      </div>
+      <form id="players-form">
+        <div class="players-container">
+          <!-- Jugador 1 -->
+          <div class="player-section">
+            <h3 class="player-title">Jugador 1</h3>
+            <div class="form-group">
+              <label for="nombre1">Nombre:</label>
+              <input type="text" id="nombre1" name="nombre1" required />
+            </div>
+            <div class="form-group">
+              <label for="turno1">Turno:</label>
+              <select id="turno1" name="turno1" required>
+                <option value="">Seleccione...</option>
+                <option value="primero">Primero</option>
+                <option value="segundo">Segundo</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="ficha1">Ficha:</label>
+              <select id="ficha1" name="ficha1" required>
+                <option value="">Seleccione...</option>
+                <option value="X">X</option>
+                <option value="O">O</option>
+              </select>
+            </div>
+          </div>
 
+          <!-- Jugador 2 -->
+          <div class="player-section">
+            <h3 class="player-title">Jugador 2</h3>
+            <div class="form-group">
+              <label for="nombre2">Nombre:</label>
+              <input type="text" id="nombre2" name="nombre2" required />
+            </div>
+            <div class="form-group">
+              <label for="turno2">Turno:</label>
+              <select id="turno2" name="turno2" required>
+                <option value="">Seleccione...</option>
+                <option value="primero">Primero</option>
+                <option value="segundo">Segundo</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="ficha2">Ficha:</label>
+              <select id="ficha2" name="ficha2" required>
+                <option value="">Seleccione...</option>
+                <option value="X">X</option>
+                <option value="O">O</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="container-logo">
+          <button type="submit" class="btn">iniciar partida</button>
+        </div>
+      </form>
+    </section>
+    <script src="/js/players.js"></script>
+  </body>
 </html>
