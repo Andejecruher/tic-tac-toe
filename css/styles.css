@@ -1,6 +1,150 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #690a0c;
+  background-color: rgb(0, 0, 0);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+}
+
+.content-title {
+  text-align: center;
+}
+
+.title {
+  color: rgb(255, 255, 255);
+  font-family: 'VT323', monospace;
+  font-style: bold;
+  font-size: 60px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: rgb(255, 255, 255);
+  font-family: 'VT323', monospace;
+  font-size: 40px;
+  margin-top: 0px;
+}
+
+.container-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  text-decoration: none;
+  min-width: auto;
+  height: auto;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background-size: 120% auto;
+  background-image: linear-gradient(315deg, #bdc3c7 0%, #2c3e50 75%);
+  font-family: 'Doto', sans-serif;
+  font-size: 40px;
+}
+.btn:hover {
+  background-position: right center;
+  background-image: linear-gradient(315deg, #4345ce 0%, #3e4480 75%);
+}
+.btn:active {
+  top: 2px;
+}
+
+.logo-img-header {
+  width: 250px;
+  height: auto;
+  margin-bottom: 0px;
+}
+
+.players-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 10px;
+}
+
+.form-container {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 320px;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'VT323', monospace;
+  font-style: bold;
+}
+
+input[type='text'],
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.7rem;
+  background: #0077ff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #005fcc;
+}
+
+.player-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.player-section:last-child {
+  border: none;
+}
+
+.player-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-align: center;
+  font-family: 'VT323', monospace;
+  font-style: bold;
 }
