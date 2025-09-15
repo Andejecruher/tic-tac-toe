@@ -7,7 +7,8 @@ body {
   align-items: center;
 }
 
-content {}
+content {
+}
 
 .content-title {
   text-align: center;
@@ -197,12 +198,15 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  direction: row;
+  align-items: center;
 }
 
 .player-indicators:hover {
   background-color: #44d110;
 }
-
 
 .player-indicator {
   position: fixed;
@@ -215,17 +219,15 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  direction: row;
+  align-items: center;
 }
 
 .player-indicator:hover {
   background-color: #44d110;
 }
-
-
-
-
-im {}
 
 .im {
   display: flex;
@@ -237,4 +239,17 @@ im {}
   width: 250px;
   height: auto;
   margin-bottom: 0px;
+}
+
+.ficha {
+  display: block;
+  font-size: 24px;
+  margin-left: 10px;
+  color: #fff;
+}
+
+.array {
+  color: #fff;
+  font-family: 'VT323', monospace;
+  font-size: 20px;
 }
