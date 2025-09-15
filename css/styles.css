@@ -7,8 +7,7 @@ body {
   align-items: center;
 }
 
-.content {
-}
+content {}
 
 .content-title {
   text-align: center;
@@ -54,10 +53,12 @@ body {
   font-family: 'Doto', sans-serif;
   font-size: 40px;
 }
+
 .btn:hover {
   background-position: right center;
   background-image: linear-gradient(315deg, #4345ce 0%, #3e4480 75%);
 }
+
 .btn:active {
   top: 2px;
 }
@@ -147,4 +148,93 @@ button:hover {
   text-align: center;
   font-family: 'VT323', monospace;
   font-style: bold;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#contador {
+  font-size: 1.5em;
+  color: #d70d0d;
+  margin-bottom: 20px;
+}
+
+#tablero {
+  display: grid;
+  grid-template-columns: repeat(3, 170px);
+  grid-template-rows: repeat(3, 170px);
+  gap: 5px;
+  justify-content: center;
+  margin: auto;
+}
+
+.celda {
+  width: 170px;
+  height: 170px;
+  font-size: 2.5em;
+  background-color: #9d9595;
+  border: 2px solid #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.celda:hover {
+  background-color: #a9ada9;
+}
+
+.player-indicators {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: #3808a7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.player-indicators:hover {
+  background-color: #44d110;
+}
+
+
+.player-indicator {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 10px 20px;
+  background-color: #3808a7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1000;
+}
+
+.player-indicator:hover {
+  background-color: #44d110;
+}
+
+
+
+
+im {}
+
+.im {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagen {
+  width: 250px;
+  height: auto;
+  margin-bottom: 0px;
 }

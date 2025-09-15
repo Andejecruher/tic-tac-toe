@@ -13,9 +13,47 @@
 </head>
 
 <body>
-  <h1 class="title">Tic-Tac-Toe Game - Tablero</h1>
+  <section class="im">
+    <div class="im">
+      <img src="/assets/img/logo.png" alt="Tic-Tac-Toe" class="imagen" />
+    </div>
+    <div id="contador">Turno #: 1</div>
+    <div id="tablero"></div>
 
-  <script src="/js/tablero.js"></script>
+    <script>
+      const tablero = document.getElementById('tablero');
+      const contador = document.getElementById('contador');
+
+      let turno = 1;
+      let jugador = 'X';
+
+      function crearTablero() {
+        for (let i = 0; i < 9; i++) {
+          const celda = document.createElement('div');
+          celda.classList.add('celda');
+          celda.addEventListener('click', () => marcarCelda(celda));
+          tablero.appendChild(celda);
+        }
+      }
+      function marcarCelda(celda) {
+        if (celda.textContent !== '') return;
+
+        celda.textContent = jugador;
+        turno++;
+        contador.textContent = `Turno #: ${turno}`;
+        jugador = jugador === 'X' ? 'O' : 'X';
+      }
+      crearTablero();
+    </script>
+    <div class="player-indicators">
+      <button id="player2" class="player-button active">Jugador 2 </button>
+    </div>
+    <div class="player-indicator">
+      <button id="player1" class="player-button active">Jugador 1 </button>
+    </div>
+
+    <script src="/js/tablero.js"></script>
+
 </body>
 
 </html>
