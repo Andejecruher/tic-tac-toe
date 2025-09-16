@@ -1,59 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tic-Tac-Toe</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=VT323&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/styles.css" />
-</head>
+  <body>
+    <section class="im">
+      <div class="player-indicator">
+        <button id="player1" class="player-button active">Jugador 1</button>
+        <span class="ficha" id="ficha-player1">x</span>
+      </div>
+      <div class="player-indicators">
+        <button id="player2" class="player-button active">Jugador 2</button>
+        <span class="ficha" id="ficha-player2">o</span>
+      </div>
 
-<body>
-  <section class="im">
-    <div class="im">
-      <img src="/assets/img/logo.png" alt="Tic-Tac-Toe" class="imagen" />
-    </div>
-    <div id="contador">Turno #: 1</div>
-    <div id="tablero"></div>
+      <div class="im">
+        <img src="/assets/img/logo.png" alt="Tic-Tac-Toe" class="imagen" />
+      </div>
 
-    <script>
-      const tablero = document.getElementById('tablero');
-      const contador = document.getElementById('contador');
+      <div id="contador">Turno: <span id="name_player"></span></div>
+      <div id="tablero"></div>
 
-      let turno = 1;
-      let jugador = 'X';
-
-      function crearTablero() {
-        for (let i = 0; i < 9; i++) {
-          const celda = document.createElement('div');
-          celda.classList.add('celda');
-          celda.addEventListener('click', () => marcarCelda(celda));
-          tablero.appendChild(celda);
-        }
-      }
-      function marcarCelda(celda) {
-        if (celda.textContent !== '') return;
-
-        celda.textContent = jugador;
-        turno++;
-        contador.textContent = `Turno #: ${turno}`;
-        jugador = jugador === 'X' ? 'O' : 'X';
-      }
-      crearTablero();
-    </script>
-    <div class="player-indicators">
-      <button id="player2" class="player-button active">Jugador 2 </button>
-    </div>
-    <div class="player-indicator">
-      <button id="player1" class="player-button active">Jugador 1 </button>
-    </div>
-
+      <p>
+        Array del tablero:
+        <span class="array" id="tablero-estado"
+          >[null, null, null, null, null, null, null, null, null]</span
+        >
+      </p>
+    </section>
     <script src="/js/tablero.js"></script>
-
-</body>
-
+  </body>
 </html>
